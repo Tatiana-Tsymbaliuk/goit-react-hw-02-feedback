@@ -35,7 +35,7 @@ state = {
                                         <li>Good: {this.state.good}</li>
                                         <li>Neutral: {this.state.neutral}</li>
                                         <li>Bad: {this.state.bad}</li>
-                                        <li>Total: {this.countTotalFeedback()}</li>
+                                        <li>Total: { }</li>
                                         <li>Positiv Feedback: {}</li>
                                 </ul>
                         </div>
