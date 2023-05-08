@@ -1,15 +1,15 @@
 import React from 'react';
 
 
-
 const FeedbackOptions = ({options, onLeaveFeedback}) => {
-        
-return (<div>{options.map(({name})=>(      
+     
+return (<div>{options.map(option=>(      
         <button 
-        name = {name}
-        key={name}
+        type="button"
+         name = {option}
+        key={option}
         onClick={onLeaveFeedback}
-        className='FeedbackBtn'>{name}</button>      
+        className="FeedbackBtn">{option}</button>      
 ))}</div>)
 }
 
