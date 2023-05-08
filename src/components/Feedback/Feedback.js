@@ -27,11 +27,11 @@ state = {
            }  
           
 	
-        //    handleFeedback = ({feedbacks}) => {
-        //         this.setState((prevState) => ({
-        //           [feedbacks]: prevState[feedbacks] + 1,
-        //         }));
-        //       };
+           handleFeedback = ({feedbacks}) => {
+                this.setState((prevState) => ({
+                  [feedbacks]: prevState[feedbacks] + 1,
+                }));
+              };
         
         // handleFeedback = ()=>{
         //         if (this.setState({good: 1})){
@@ -54,20 +54,14 @@ state = {
         //         this.setState(prevState => ({
         //                 bad: prevState.bad + 1
         //         })); 
-        // }
-
-      
-        
+        // }      
         countTotalFeedback(){
                 return (this.state.good + this.state.neutral + this.state.bad)         
         }
         countPositiveFeedbackPercentage() {
-                return (Math.round((this.state.good * 100) / this.countTotalFeedback())||0)
-                
+                return (Math.round((this.state.good * 100) / this.countTotalFeedback())||0)               
         }
-        
- 
-        render() {
+       render() {
                 const total = this.countTotalFeedback();
                 //const procent = this.countPositiveFeedbackPercentage();
                 return (
