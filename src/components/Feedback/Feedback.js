@@ -27,11 +27,13 @@ state = {
            }  
           
 	
-           handleFeedback = ({feedbacks}) => {
-                this.setState((prevState) => ({
-                  [feedbacks]: prevState[feedbacks] + 1,
-                }));
-              };
+           handleFeedback = e => {
+                console.log(e.currentTarget.value)
+               const name = e.currentTarget.name
+               this.setState(prevState=>({
+                [name]: prevState[name] + 1
+               }))
+              }
         
         // handleFeedback = ()=>{
         //         if (this.setState({good: 1})){
