@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Statistics = ({good, neutral, bad, total, positivePercentage})=> {
       return   <div>
@@ -13,4 +14,12 @@ const Statistics = ({good, neutral, bad, total, positivePercentage})=> {
  // static propTypes = {
                 
         // }
-export default Statistics
+export default Statistics;
+
+Statistics.propTypes = {
+	good: PropTypes.number.isRequired,
+	neutral: PropTypes.number.isRequired,
+	bad: PropTypes.number.isRequired,
+	total: PropTypes.number.isRequired,
+	positivePercentage: PropTypes.number.isRequired
+};
